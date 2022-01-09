@@ -1,0 +1,99 @@
+.header {
+    width: 100%;
+    padding: 10px 0;
+    background: #171513;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        & form {
+
+            & input {
+                display: none;
+            }
+
+            & label {
+                text-transform: uppercase;
+                font-size: 20px;
+                color: #fff;
+            }
+
+            & ul {
+                display: none;
+                list-style: none;
+
+                & li {
+                    margin-top: 12px;
+        
+                    & a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 18px;
+        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__html-form {
+        position: relative;
+    }
+
+    #html-btn:checked ~ .header__html-menu,
+    #css-btn:checked ~ .header__css-menu,
+    #js-btn:checked ~ .header__js-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 34px;
+        left: -30px;
+        max-width: 300px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__html-menu {
+        background: #BB5309;
+        padding: 0 0 20px 20px;
+        box-sizing: border-box;
+
+        & li {
+            margin-top: 12px;
+
+            & a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 18px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__css-form {
+        position: relative;
+    }
+
+    &__css-menu {
+        background: #1E75CB;
+        padding: 0 0 20px 20px;
+        box-sizing: border-box;
+    }
+
+    &__js-form {
+        position: relative;
+    }
+
+    &__js-menu {
+        background: #D1C512;
+        padding: 0 0 20px 20px;
+        box-sizing: border-box;
+    }
+}
