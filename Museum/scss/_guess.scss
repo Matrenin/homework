@@ -1,0 +1,40 @@
+.guess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+
+    & p {
+        margin-top: 36px;
+        font-size: 16px;
+    }
+
+    & input {
+        margin-top: 18px;
+        max-width: 100px;
+        width: 100%;
+        min-height: 34px;
+        outline: none;
+        box-sizing: border-box;
+        text-align: center;
+        background: #F2F6F6;
+
+        &:focus {
+            outline: 1px solid #29B8F7;
+            border: none;
+        }
+    }
+
+    & a {
+        max-width: 150px;
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        background: #A4EEEB;
+        margin: 80px auto 0;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+    }
+}

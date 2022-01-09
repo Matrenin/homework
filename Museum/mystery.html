@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sList.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap" rel="stylesheet">
+    <title>Mesuem</title>
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="header__box container">
+            <form action="#" class="header__html-form">
+                <input type="checkbox" id="html-btn">
+                <label for="html-btn">html</label>
+                <ul class="header__html-menu">
+                    <li>
+                        <a href="#">Семантика</a>
+                    </li>
+                    <li>
+                        <a href="#">Формы</a>
+                    </li>
+                    <li>
+                        <a href="#">Картинки</a>
+                    </li>
+                    <li>
+                        <a href="#">Интерактив</a>
+                    </li>
+                </ul>
+            </form>
+
+            <form action="#" class="header__css-form">
+                <input type="checkbox" id="css-btn">
+                <label for="css-btn">css</label>
+                <ul class="header__css-menu">
+                    <li>
+                        <a href="#">Анимации</a>
+                    </li>
+                    <li>
+                        <a href="#">Трансформации</a>
+                    </li>
+                    <li>
+                        <a href="#">Фон</a>
+                    </li>
+                    <li>
+                        <a href="#">Flex: box</a>
+                    </li>
+                    <li>
+                        <a href="#">Grid</a>
+                    </li>  
+                </ul>
+            </form>
+
+            <form action="#" class="header__js-form">
+                <input type="checkbox" id="js-btn">
+                <label for="js-btn">js</label>
+                <ul class="header__js-menu">
+                    <li>
+                        <a href="#">Типы данных</a>
+                    </li>
+                    <li>
+                        <a href="#">If...else</a>
+                    </li>
+                    <li>
+                        <a href="#">Циклы</a>
+                    </li>
+                    <li>
+                        <a href="#">Массивы</a>
+                    </li>
+                    <li>
+                        <a href="#">Функции</a>
+                    </li>  
+                </ul>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <div class="web">
+            <div class="web__nav">
+                <div class="web__nav-box">
+                    <a href="main.html">Главная</a>
+                    <a href="mystery.html">Загадки</a>
+                    <a href="guess.html">Угадайка</a>
+                </div>
+            </div>
+
+            <div class="web__mystery">
+                <h1>Вас приветствует игра в загадки</h1>
+                <h3>Ответьете на вопросы:</h3>
+                <div class="web__mystery-box">
+                    <span>Кто дышит под водой?</span>
+                    <input type="text" id="userAnswer1" autocomplete="off">
+
+                    <span>Кто не выступает в цырке?</span>
+                    <input type="text" id="userAnswer2" autocomplete="off">
+
+                    <span>Какое животное пьет кровь?</span>
+                    <input type="text" id="userAnswer3" autocomplete="off">
+
+                    <a href="#" onClick="checkAnswers()" autocomplete="off">Ответить</a>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+        
+
+    <footer class="footer">
+        <span>&copy;Ваши права защищены?</span>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
