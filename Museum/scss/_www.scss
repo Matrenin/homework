@@ -1,34 +1,45 @@
-.guess {
-    margin: 200px auto;
-    max-width: 800px;
-    width: 100%;
+.www {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
+    margin: 90px auto;
     text-align: center;
 
     & h1 {
         font-size: 30px;
     }
 
+    &__img-box {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        & img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
     & p {
-        margin-top: 16px;
+        margin-top: 32px;
     }
 
     & input {
-        margin: 60px auto 0;
-        max-width: 120px;
+        margin: 24px auto 0;
+        max-width: 180px;
         width: 100%;
-        text-align: center;
-        outline: none;
-        background: #F2F6F6;
-        border: none;
         min-height: 30px;
-        border-bottom: 1px solid #000;
+        border: none;
+        background: #F2F6F6;
+        border-bottom: 1px solid black;
+        outline: none;
+        box-sizing: border-box;
+        padding-left: 12px;
 
         &:focus {
-            outline: 1px solid #A4EEEB;
-            border: none;
             background: #fff;
+            border: none;
+            outline: 1px solid $mainColor;
         }
     }
 
@@ -37,7 +48,7 @@
         width: 100%;
         margin: 40px auto 0;
         border: none;
-        background: #A4EEEB;
+        background: $mainColor;
         padding: 8px 22px;
         box-sizing: border-box;
         border-radius: 8px;
@@ -46,7 +57,7 @@
 
     & a {
         text-decoration: none;
-        margin: 40px auto;
+        margin: 40px auto 0;
         max-width: 100px;
         width: 100%;
         padding: 8px 22px;
