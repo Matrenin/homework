@@ -1,3 +1,5 @@
+$mainColor: #A4EEEB;
+
 * {
     margin: 0;
     padding: 0;
@@ -15,8 +17,22 @@ body {
     margin: 0 auto;
 }
 
+main {
+    flex: 1 1 auto;
+}
+
 @import "../scss/header";
 
-@import "../scss/web";
+@import "../scss/footer";
 
 @import "../scss/guess";
+
+@import "../scss/www";
+
+@import "../scss/blind";
+
+@import "../scss/roulette";
+
+@import "../scss/index";
+
+@import "../scss/dao";
