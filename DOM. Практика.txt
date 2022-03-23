@@ -1,0 +1,51 @@
+element.clildren;
+> Выводит все элементы внутри element.
+
+element.childNodes;
+> Выводит все узлы в element.
+
+divEl.innerText;
+> Выводит текст внутри тега divEl, которая видна глазу.
+
+divEl.textContent;
+> Выводит весь текст внутри тега divEl, даже скрытый (display: none).
+
+divEl.innerHTML;
+> Выводит весь html внутри тега divEl.
+
+divEl.remove();
+> Удаляет тег divEl.
+
+targetElement.insertAdjacentElement("position", element);
+> Вставляет element в указанную позицию узла targetElement.
+
+document.createElement(tagName);
+> Создает новый элемент с заданным тегом tagName;
+
+element.classList;
+> Возвращает псевдомассив, содержащий все классы элемента.
+
+element.getAttribute(attributeName);
+> Возвращает значение атрибута attributeName у element.
+
+element.dataset;
+> Xранит значение всех data атрибутов у element в виде псевдомассива.
+
+element.cloneNode(true);
+> Создает глубокую копию (со всеми детьми элемента) element.
+
+element.replaceWith(newElement);
+> Заменяет елемент на новый.
+
+event.preventDefault();
+> Отменяет событие браузера по умолчанию.
+
+setTimeout(function, delay);
+> Устанавливаем таймер, через какое време (delay) в миллисекундах, выполнится function.
+
+
+
+
+
+
+
