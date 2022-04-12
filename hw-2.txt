@@ -1,0 +1,82 @@
+class ProductList {
+  constructor(container = ".products") {
+    this.container = document.querySelector(container);
+    this.goods = [];
+    this.productsObjects = [];
+    this.sum = 0;
+    
+    this.fetchGoods();
+    this.render();
+    this.sumPrice();
+  }
+  
+  fetchGoods() {
+    this.goods = [
+      {id: 1, title: "notebook", price: 2000},
+      {id: 2, title: "mouse", price: 40},
+      {id: 3, title: "keyboard", price: 50},
+    ];
+  }
+  
+  render() {
+    for (let good of this.goods) {
+      let productObject = new ProductItem(good);
+      this.productsObjects.push(productObject);
+      this.container.insertAdjacentHTML("beforeend", productObject.getString());
+    }
+  }
+  
+  sumPrice() {
+    for (let el of this.goods) {
+      this.sum += el.price;
+    }
+    return this.sum;
+  }
+}
+
+class ProductItem {
+  constructor(product) {
+    this.id = product.id;
+    this.title = product.title;
+    this.price = product.price;
+  }
+  
+  getString() {
+    return `
+      <div class="product">
+        <p>${this.id}</p>
+        <p>${this.title}</p>
+        <p>${this.price}</p>
+      </div> `;
+  }
+}
+
+let list = new ProductList();
+console.log(list);
+
+	===============
+
+class Burger {
+  constructor(price, cal) {
+    this.price = price;
+    this.cal = cal;
+    
+    this.addCal();
+  }
+  
+  addCal() {
+    let inputEls = document.querySelectorAll("input");
+    for (let input of inputEls) {
+      if (input.checked) {
+        let calType = +input.dataset.cal;
+        this.cal += calType;
+      }
+    }
+    return this.cal;
+  }
+  
+}
+
+let burger = new Burger(500, 400);
+console.log(burger);
+
