@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Burger</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__box container">
+            <h3>Menu</h3>
+            <button>Корзина</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Шефф Бургер</h1>
+        <div class="burger container">
+            <img src="img/burder.jpg" alt="chef burger" height="300">
+            <div class="burger__description">
+                <h4>Ингредиенты:</h4>
+                <p data-price="30" data-calories="100">Добавить сыр</p>
+                <p data-price="40" data-calories="150">Добавить бекон</p>
+                <p data-price="30" data-calories="50">Добавить лук</p>
+
+                <div class="result">Цена: <span class="span-price"></span> p, калории: <span class="span-calories"></span></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/burger.js"></script>
+</body>
+</html>
