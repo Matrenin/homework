@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sandbox</title>
+</head>
+<body>
+    
+    <div id="app">
+        <header class="header">
+            <div class="header__box">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo" width="130">
+                </a>
+                <form action="#">
+                    <input type="search" autocomplete="off">
+                    <button type="submit">
+                        <img src="img/search.png" alt="search" width="27">
+                        <span>Поиск</span>   
+                    </button>
+                </form>
+                <p class="enter">
+                    <img src="img/enter.png" alt="enter" width="27">
+                    <span>Войти</span>
+                </p>
+                <p class="basketBtn">
+                    <img src="img/basket.png" alt="basket" width="27">
+                    <span>Корзина</span>
+                    <div class="basket">
+                        <cart ref="cart"></cart>
+                        <!-- <div class="basket__box">
+                            <div class="basket__item">
+                                <div class="basket__desc">
+                                    <p>product.title</p>
+                                    <span>product.price</span>
+                                </div>
+                                <div class="basket__count">
+                                    <button>-</button>
+                                    <span>product.quantity</span>
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <button>Заказать <span>product.price</span></button>
+                        </div> -->
+                    </div>
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <div class="content">
+                <h1>Папа Джонс</h1>
+                <products ref="products"></products>
+                <!-- <div class="content__box">
+                    <div class="content__item">
+                        <div class="content__item-img">
+                            <img src="img/4сыра.jpg" alt="four-cheese" width="260">
+                        </div>
+                        <div class="content__desc">
+                            <p>product.title</p>
+                            <p>product.desc</p>
+                            <div class="content__desc-result">
+                                <p>product.price</p>
+                                <button>В корзину</button>
+                            </div>
+                        </div>
+                        <div class="modal">
+                            <div class="modal__box">
+                                <img src="img/4сыра.jpg" alt="four cheese" width="300">
+                                <div class="modal__desc">
+                                    <h4>product.title</h4>
+                                    <p>product.desc</p>
+                                    <div class="modal__add">
+                                        <h5>Ингредиенты</h5>
+                                        <div class="modal__add-list">
+                                            <div class="modal__add-item">
+                                                <input type="checkbox" id="add.id">
+                                                <label for="add.id">add.title</label>
+                                                <span>add.price</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal__result">
+                                        <div class="modal__result-box">
+                                            <button>-</button>
+                                            <span>product.count</span>
+                                            <button>+</button>
+                                        </div>
+                                        <button>Добавить <span>product.price</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </main>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/catalogComp.js"></script>
+    <script src="js/cartComp.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

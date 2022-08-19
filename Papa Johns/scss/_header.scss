@@ -1,0 +1,56 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+
+    &__box {
+        display: grid;
+        grid-template-columns: 10% 70% 10% 10%;
+
+        & a {
+            padding: 12px 0;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    & form  {
+        display: flex;
+        width: 100%;
+
+        & input {
+            width: 100%;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 20px;
+            padding-left: 34px;
+        }
+
+        & > button {
+            width: 230px;
+            background: transparent;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.basketBtn,
+.enter {
+    background: transparent;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        margin-right: 10px;
+    }
+}

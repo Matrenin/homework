@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background: #f6f6f6;
+    height: 100vh;
+}
+
+@import  "../scss/header";
+
+@import "../scss/basket";
+
+@import "../scss/content";
+
+@import "../scss/modal";
