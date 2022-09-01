@@ -1,0 +1,87 @@
+//  ============= webpack.config.js =============
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("htmp-webpack-plugin");
+
+module.exports = {
+  entry: "./js/main.js", //точка входа
+  mode: "development",
+  output : {  // точка выхода
+    filename: "main.[contenthash].js",
+    path: path.resolve(__dirname, 'dist'),
+  },
+  module : {
+    rules: [
+      {
+        test: /\.(png|jpg|gif|mp3)$/i,  // описываем с какими файлами мы работаем
+        loader: "file-loader", // loader, который будет перемещать и обрабатывать файлы
+        options: {
+          name: "[path][name].[ext]"
+        }
+      },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({template: resolve(__dirname, "index.html")}),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css"
+    })
+  ],
+  devServer: {
+    port: 3000
+  }
+};
+
+//  ============= terminal =============
+// 1. Инициализируем npm пакет
+npm init -y
+
+// 2. Устанавливаем webpack и webpack cli
+npm install webpack webpack-cli --save-dev
+
+// 3. Создаем файл, в котором будем описывать правила работы сборщика
+touch webpack.config.js
+
+// Если нужно добавляем luxon
+npm i luxon
+
+// 4. Запускаме скрипт
+npm start
+
+// Устанавливаем loader для переноса файлов
+npm i file-loader -D
+
+npm i -D style-loader css-loader
+
+// Устанавливаем плагин для извлечения css в отдельный файл
+npm install --save-dev mini-css-extract-plugin
+
+// Устанавливаем плагин для html
+npm install --save-dev html-webpack-plugin
+
+npm i -D sass-loader sass
+
+// Устанавливаем локальный сервер для проекта
+npm i -D webpack-dev-server
+
+// Запускаем проект на локальном сервере
+npm run serve
+
+//  ============= main.js =============
+import "./form.js";
+import "./css/style.css";
+
+//  ============= packege.json =============
+"scripts": {
+  "clean": "rm - rf dist",
+  "start": "npm run clean && npx webpack --mode=development",
+  "serve": "npm run clean && npx webpack server --mode=development"
+}

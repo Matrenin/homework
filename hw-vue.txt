@@ -1,0 +1,109 @@
+	HTML
+<div id="app">
+  <div class="calc">
+    <input type="number" v-model.number="op1">
+    <input type="number" v-model.number="op2">
+    = <span> {{ result }}</span>
+    <div class="btn__box">
+      <button @click="calc(operation)" v-for="operation of operations" :key="operation">{{ operation }}</button>
+    </div>
+    <div class="screenKeyboard__box">
+      <input type="checkbox" v-model="showKeyBoard">
+      <div v-show="showKeyBoard" class="btn__numbers">
+        <button v-model="op1" @click="keyBoardClick(num)" v-for="num of numbers" :key="num">{{ num }}</button>
+        <p>{{ arrOp1 }}</p>
+        <input type="radio" id="1" value="one" v-model="picked">
+        <input type="radio" id="2" value="two" v-model="picked">
+        <p>{{ picked }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+
+
+	VUE JS
+
+const app = new Vue({
+  el: "#app",
+  data: {
+    result: 0,
+    op1: "",
+    op2: "",
+    operations: ["+", "-", "/", "*", "^"],
+    numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "del"],
+    showKeyBoard: true,
+    picked: null,
+    arrOp1: [],
+    arrOp2: [],
+  },
+  methods: {
+    calc(operation) {
+      this.result = "";
+      if (operation === "+") {
+        this.sum();
+      } else if (operation === "-") {
+        this.sub();
+      } else if (operation === "*") {
+        this.mult();
+      } else if (operation === "/") {
+        this.del();
+      } else if (operation === "^") {
+        this.degree();
+      }
+    },
+    sum() {
+      this.result = this.op1 + this.op2;
+    },
+    sub() {
+      this.result = this.op1 - this.op2;
+    },
+    mult() {
+      this.result = this.op1 * this.op2;
+    },
+    del() {
+      this.result = this.op1 / this.op2;
+    },
+    degree() {
+      let num = 1;
+      for (let i = 0; i < this.op2; i++) {
+        num *= this.op1;
+      }
+      this.result = num;
+    },
+    
+    keyBoardClick(num) {
+      if (this.picked === "one") {
+        if (num !== "del") {
+          this.arrOp1.push(num);
+        } else {
+          this.arrOp1.splice(-1, 1);
+        }
+        this.arrOp1.join("");
+      }
+      if (this.picked === "two") {
+        if (num !== "del") {
+          this.arrOp2.push(num);
+        } else {
+          this.arrOp2.splice(-1, 1);
+        }
+      }
+      this.op1 = +(this.arrOp1.join(""));
+      this.op2 = +(this.arrOp2.join(""));
+    },
+  }  
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
